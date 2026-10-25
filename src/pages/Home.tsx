@@ -1,7 +1,10 @@
 import { TypeAnimation } from "react-type-animation";
 import kia from "../assets/kia.jpg";
-import {  ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import Cv from "../assets/CV_Hizkia_Siahaan.pdf";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const roles = [
     "Full-Stack Developer",
@@ -57,29 +60,61 @@ export default function Homepage() {
 
                     <Badge
                         variant="outline"
-                        className="mt-6 gap-2 rounded-full border-emerald-200/70 bg-emerald-50/70 px-4 py-4 text-xs font-medium tracking-wide text-emerald-800"
+                        className="mt-6 flex h-auto w-fit items-center gap-4 rounded-full border-emerald-200/70 bg-emerald-50/70 px-4 py-3 text-xs font-medium tracking-wide text-emerald-800"
                     >
-                        <span className="relative flex size-2.5">
-                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                            <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
+                        {/* Status */}
+                        <span className="flex items-center gap-2 whitespace-nowrap">
+                            <span className="relative flex size-2.5">
+                                <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                                <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
+                            </span>
+
+                            Open to Internship Opportunities
                         </span>
 
-                        Open to Internship Opportunities
+                        <Separator
+                            orientation="vertical"
+                            className="h-5 bg-emerald-300/80"
+                        />
+                       <Tooltip>
+                        <TooltipTrigger
+                        render={
+                             <a
+                            href="mailto:siahaanhizkia548@gmail.com"
+                            className="whitespace-nowrap transition-colors hover:text-emerald-600"
+                        >
+                            siahaanhizkia548@gmail.com
+                        </a>
+                        }
+                        />
+                        <TooltipContent>
+                            <p>Go to my email</p>
+                        </TooltipContent>
+                       </Tooltip>
                     </Badge>
                     <div className="mt-8 flex flex-wrap gap-4">
+                        <Tooltip>
+                            <TooltipTrigger render={
+                                <a
+                                    href={Cv}
+                                    download
+                                    className="group inline-flex items-center gap-2 rounded-xl bg-slate-800 px-6 py-3 text-sm font-medium text-white shadow-xl shadow-slate-500/30 ring-2 ring-slate-500 ring-offset-2 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-900"
+                                >
+                                    <Download size={16} />
+                                    Download My CV
+                                </a>
+                            }
+                            />
+                            <TooltipContent>
+                                <p> Download My CV</p>
+                            </TooltipContent>
+                        </Tooltip>
                         <a
                             href="#projects"
-                            className="rounded-xl group transform hover:-translate-y-1 gap-2 inline-flex items-center shadow-xl ring-2 ring-slate-500 ring-offset-2 shadow-slate-500/30 bg-slate-800  px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-slate-900"
+                            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-6 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
                         >
                             <ArrowUpRight size={16} />
-                            View Projects
-                        </a>
-
-                        <a
-                            href="#contact"
-                            className="rounded-xl border border-slate-200 px-6 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
-                        >
-                            Contact Me
+                            My Projects
                         </a>
                     </div>
 

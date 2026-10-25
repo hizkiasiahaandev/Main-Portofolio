@@ -1,105 +1,110 @@
-import { TypeAnimation } from "react-type-animation";
-import kia from "../assets/kia.jpg";
-import {  ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Code2, GraduationCap, Lightbulb, Rocket } from "lucide-react";
 
-const roles = [
-    "Full-Stack Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "Software Developer",
+const highlights = [
+    {
+        icon: Code2,
+        title: "Software Development",
+        description:
+            "Interested in building modern, responsive, and maintainable web applications.",
+    },
+    {
+        icon: Lightbulb,
+        title: "Continuous Learning",
+        description:
+            "Always exploring new technologies and improving my problem-solving skills.",
+    },
+    {
+        icon: Rocket,
+        title: "Career Growth",
+        description:
+            "Looking for opportunities to gain practical experience and grow as a developer.",
+    },
 ];
-
 
 export default function Aboutpage() {
     return (
-        <section id="home">
-            <div className="grid w-full max-w-7xl mx-auto items-center px-4 gap-12 md:grid-cols-2">
-
-                <div>
+        <section id="about" className="px-4">
+            <div className="mx-auto w-full max-w-7xl">
+                <div className="mb-12 max-w-2xl">
                     <p className="mb-3 flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-blue-600">
                         <span className="h-px w-8 bg-blue-600" />
-                        Hello, I'm a Fresh Graduate
+                        About Me
                     </p>
 
-                    <h1 className="text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">
-                        Hizkia Siahaan
-                    </h1>
-
-                    <h2 className="mt-3 text-xl font-medium text-slate-500 md:text-2xl">
-                        <TypeAnimation
-                            sequence={roles.flatMap((role) => [role, 2000])}
-                            wrapper="span"
-                            speed={50}
-                            deletionSpeed={50}
-                            repeat={Infinity}
-                            className="text-slate-500"
-                        />
+                    <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                        A little more about{" "}
+                        <span className="text-slate-500">me.</span>
                     </h2>
 
-                    <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-                        <p className="max-w-lg leading-relaxed text-slate-600">
-                            A recent graduate passionate about software development,
-                            building modern web applications, and continuously
-                            improving my programming skills.
-                        </p>
 
-                        <div className="shrink-0 relative border-l-2 border-slate-300 pl-4">
-                            <p className="tect-[10px] font-medium tracking-wider text-slate-400">
-                                GPA
-                            </p>
-                            <p className="text-lg font-bold text-slate-800">
-                                3.73 <span className="text-xs font-medium text-slate-400"> / 4.00</span>
-                            </p>
-                            <div className="absolute  left-0 -top-5 -translate-x-1/2 translate-y-1/2  z-20 size-6 rounded-full border-4 border-white bg-blue-500" />
+                    <p className="mt-5 leading-relaxed text-slate-600">
+                        I graduated from Universitas Sumatera Utara (USU) in 2026
+                        with a Diploma (D3) in Informatics Engineering. I'm passionate
+                        about software development and building modern web applications
+                        while continuously improving my technical skills.
+                    </p>
+
+                </div>
+
+                <div className="grid gap-6 md:grid-cols-3">
+                    {highlights.map((item, index) => {
+                        const Icon = item.icon;
+
+                        return (
+                            <div
+                                key={item.title}
+                                className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-900/5"
+                            >
+                                <div className="mb-5 flex size-11 items-center justify-center rounded-xl bg-slate-100 text-slate-700 transition-colors duration-300 group-hover:bg-slate-800 group-hover:text-white">
+                                    <Icon size={21} />
+                                </div>
+
+                                <p className="mb-2 text-xs font-medium tracking-widest text-slate-400">
+                                    0{index + 1}
+                                </p>
+
+                                <h3 className="mb-3 text-lg font-semibold text-slate-900">
+                                    {item.title}
+                                </h3>
+
+                                <p className="text-sm leading-relaxed text-slate-600">
+                                    {item.description}
+                                </p>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                <div className="mt-8 flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
+                    <div className="flex items-start gap-4">
+                        <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700 shadow-sm">
+                            <GraduationCap size={22} />
                         </div>
+
+
+                        <div>
+                            <h3 className="font-semibold text-slate-900">
+                                Education & Background
+                            </h3>
+                            <p className="mt-1 max-w-xl text-sm leading-relaxed text-slate-600">
+                                Graduated in 2026 with a Diploma (D3) in Informatics
+                                Engineering. Achieved a GPA of 3.73/4.00 and am ready
+                                to apply my technical knowledge and grow as a software
+                                developer.
+                            </p>
+                        </div>
+
                     </div>
 
                     <Badge
                         variant="outline"
-                        className="mt-6 gap-2 rounded-full border-emerald-200/70 bg-emerald-50/70 px-4 py-4 text-xs font-medium tracking-wide text-emerald-800"
+                        className="w-fit shrink-0 gap-2 rounded-full border-emerald-200 bg-emerald-50 px-3 py-3 text-xs font-medium text-emerald-700"
                     >
-                        <span className="relative flex size-2.5">
-                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                            <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
-                        </span>
-
-                        Open to Internship Opportunities
+                        <span className="size-2 rounded-full bg-emerald-500" />
+                        Open to Opportunities
                     </Badge>
-                    <div className="mt-8 flex flex-wrap gap-4">
-                        <a
-                            href="#projects"
-                            className="rounded-xl group transform hover:-translate-y-1 gap-2 inline-flex items-center shadow-xl ring-2 ring-slate-500 ring-offset-2 shadow-slate-500/30 bg-slate-800  px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-slate-900"
-                        >
-                            <ArrowUpRight size={16} />
-                            View Projects
-                        </a>
-
-                        <a
-                            href="#contact"
-                            className="rounded-xl border border-slate-200 px-6 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
-                        >
-                            Contact Me
-                        </a>
-                    </div>
-
                 </div>
-
-
-
-                <div className="relative group flex justify-center md:justify-end">
-                    <div className="absolute inset-1 rounded-full bg-blue-200/40 blur-3xl" />
-
-                    <div className="absolute right-3 top-3 hidden aspect-square w-full max-w-sm rounded-3xl border-2 border-slate-200 md:block" />
-
-                    <img
-                        src={kia}
-                        alt="Hizkia Siahaan"
-                        className="relative z-10 group-hover:translate-x-2 group-hover:-rotate-4 aspect-square w-full max-w-sm rounded-3xl border-4 border-white object-cover object-[center_20%] shadow-xl shadow-slate-900/10 transition-all duration-500 ease-in-out hover:saturate-0 hover:scale-105 hover:shadow-2xl"
-                    />
-                </div>
-
-
             </div>
         </section>
     );

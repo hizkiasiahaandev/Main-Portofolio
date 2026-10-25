@@ -1,6 +1,7 @@
 import Aboutpage from "./pages/About";
 import Homepage from "./pages/Home";
 import Navbar from "./pages/Navbar";
+import Projectpage from "./pages/Project";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Homepage />
       <Aboutpage />
+      <Projectpage />
     </div>
   );
 };

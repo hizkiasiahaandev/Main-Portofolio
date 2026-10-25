@@ -26,7 +26,7 @@ const navLinks: NavLink[] = [
   },
   {
     label: "Contact",
-    href: "#contact",
+    href: "mailto:siahaanhizkia548@gmail.com",
     description: "Let's connect and collaborate",
   },
 ];
