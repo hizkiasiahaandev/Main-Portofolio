@@ -43,8 +43,6 @@ export default function Navbar() {
 
     window.addEventListener("resize", handleResize);
 
-    window.removeEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -54,13 +52,14 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50">
       <nav className="w-full border-b border-slate-200/70 bg-white/90 text-slate-700 shadow-sm backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4">
-          <a href="#home" className="flex group relative isolate p-1 shrink-0 items-center gap-2.5">
-
+          <a
+            href="#home"
+            className="group relative isolate flex shrink-0 items-center gap-2.5 p-1"
+          >
             <div className="pointer-events-none absolute -inset-px -z-10 overflow-hidden rounded-xl">
               <div className="absolute left-1/2 top-1/2 aspect-square w-[200%] -translate-x-1/2 -translate-y-1/2 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_300deg,#94a3b8_330deg,#fff_350deg,transparent_360deg)]" />
             </div>
             <div className="pointer-events-none absolute inset-px -z-10 rounded-[11px] bg-white" />
-
 
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight text-slate-800">
@@ -72,7 +71,7 @@ export default function Navbar() {
             </div>
           </a>
 
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -83,6 +82,7 @@ export default function Navbar() {
               </a>
             ))}
           </div>
+
           <button
             type="button"
             aria-label={open ? "Tutup menu" : "Buka menu"}
@@ -98,72 +98,76 @@ export default function Navbar() {
       {open && (
         <div
           onClick={() => setOpen(false)}
-          className="fixed inset-0 z-40 bg-black/40 md:hidden"
+          className="fixed inset-0 z-40 bg-slate-950/30 backdrop-blur-xs md:hidden"
         />
       )}
 
-
-      <div className={`fixed flex flex-col inset-y-0 right-0 z-50 w-64 bg-white p-6 shadow-xl transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"
-        }`}>
-
-        <div className="mb-6 leading-none">
-          <p className="text-lg font-bold text-slate-800">Navigation</p>
-          <span className="text-[11px] text-slate-500">
-            Explore my portfolio
-          </span>
-          <Separator className="h-px my-3 bg-slate-200" />
+      <div
+        className={`fixed inset-y-0 right-0 z-50 flex w-72 flex-col bg-white p-6 shadow-2xl transition-transform duration-300 ease-out ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex items-center justify-between pb-4">
+          <div>
+            <p className="text-base font-bold text-slate-900">Navigation</p>
+            <span className="text-xs text-slate-500">Explore my portfolio</span>
+          </div>
+          <button
+            onClick={() => setOpen(false)}
+            className="flex size-8 items-center justify-center rounded-lg bg-slate-100 text-slate-500 hover:bg-slate-200"
+          >
+            <X size={18} />
+          </button>
         </div>
 
-        {navLinks.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            onClick={() => setOpen(false)}
-            className="group flex items-center justify-between gap-3  rounded-xl transition-colors px-3 py-3 text-slate-700 hover:bg-slate-50"
-          >
-            <div className="flex flex-col">
-              <span className="text-lg font-semibold">
-                {link.label}
-              </span>
-              <span className="text-[11px] text-slate-500">
-                {link.description}
-              </span>
-            </div>
+        <Separator className="my-2 h-px bg-slate-100" />
 
-            <ArrowUpRight
-              size={18}
-              className="shrink-0 text-slate-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0 group-hover:text-slate-700"
-            />
-          </a>
-        ))}
-
-        <div className="mt-auto pt-8">
-
-          <div className="rounded-xl border border-slate-200 bg-linear-to-br from-slate-50 to-slate-100 p-4">
-            <div className="mb-4 flex items-center justify-between">
-              <div className="flex size-9 items-center justify-center rounded-xl bg-white text-slate-700 shadow-sm">
-                <Code2 size={18} />
+        <div className="mt-4 flex flex-col gap-1">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="group flex items-center justify-between rounded-xl p-3 transition-all hover:bg-slate-50 active:bg-slate-100"
+            >
+              <div className="flex flex-col">
+                <span className="text-sm font-semibold text-slate-800 group-hover:text-slate-950">
+                  {link.label}
+                </span>
+                <span className="text-[11px] text-slate-500">
+                  {link.description}
+                </span>
               </div>
+              <ArrowUpRight
+                size={16}
+                className="text-slate-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-slate-900"
+              />
+            </a>
+          ))}
+        </div>
 
-              <span className="text-[10px] font-medium uppercase tracking-wider text-slate-400">
+        <div className="mt-auto pt-6">
+          <div className="rounded-2xl border border-slate-200/80 bg-slate-50/60 p-4">
+            <div className="mb-3 flex items-center justify-between">
+              <div className="flex size-8 items-center justify-center rounded-lg bg-slate-900 text-white">
+                <Code2 size={16} />
+              </div>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                 Technologies
               </span>
             </div>
 
-            <p className="text-sm font-semibold text-slate-800">
-              My Tech Stack
-            </p>
-
-            <p className="text-xs leading-relaxed text-slate-500">
+            <p className="text-xs font-bold text-slate-900">My Tech Stack</p>
+            <p className="mt-0.5 text-[11px] leading-relaxed text-slate-500">
               Tools and technologies I use to build applications.
             </p>
 
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-3 flex flex-wrap gap-1.5">
               {["React", "TypeScript", "Node.js", "Prisma", "Tailwind CSS"].map(
                 (tech) => (
                   <span
                     key={tech}
-                    className="rounded-lg border border-slate-200 bg-white px-2.5 py-1.5 text-[10px] font-medium text-slate-600 transition-all hover:border-slate-400 hover:text-slate-900"
+                    className="rounded-md border border-slate-200 bg-white px-2 py-1 text-[10px] font-semibold text-slate-700 shadow-2xs"
                   >
                     {tech}
                   </span>
@@ -172,16 +176,14 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="mt-5 pt-4">
-            <Separator className="my-3 h-px bg-slate-200" />
-            <p className="text-center text-[11px] text-slate-400">
+          <div className="mt-4 text-center">
+            <Separator className="mb-3 h-px bg-slate-100" />
+            <p className="text-[11px] font-medium text-slate-400">
               © 2026 Hizkia Portfolio
             </p>
           </div>
         </div>
-
       </div>
-
     </header>
   );
 }
