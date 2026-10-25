@@ -1,3 +1,4 @@
+import Aboutpage from "./pages/About";
 import Homepage from "./pages/Home";
 import Navbar from "./pages/Navbar";
 
@@ -7,6 +8,7 @@ function App() {
     >
       <Navbar />
       <Homepage />
+      <Aboutpage />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { ArrowUpRight, Code2, Menu, X } from "lucide-react";
+import { ArrowUpRight, Code2, Menu, Tag, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 type NavLink = {
@@ -103,22 +103,15 @@ export default function Navbar() {
       )}
 
       <div
-        className={`fixed inset-y-0 right-0 z-50 flex w-72 flex-col bg-white p-6 shadow-2xl transition-transform duration-300 ease-out ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed inset-y-0 right-0 z-50 flex w-72 flex-col bg-white p-6 shadow-2xl transition-transform duration-300 ease-out ${open ? "translate-x-0" : "translate-x-full"
+          }`}
       >
-        <div className="flex items-center justify-between pb-4">
-          <div>
-            <p className="text-base font-bold text-slate-900">Navigation</p>
-            <span className="text-xs text-slate-500">Explore my portfolio</span>
-          </div>
-          <button
-            onClick={() => setOpen(false)}
-            className="flex size-8 items-center justify-center rounded-lg bg-slate-100 text-slate-500 hover:bg-slate-200"
-          >
-            <X size={18} />
-          </button>
+
+        <div>
+          <p className="text-base font-bold text-slate-900">Navigation</p>
+          <span className="text-xs text-slate-500">Explore my portfolio</span>
         </div>
+
 
         <Separator className="my-2 h-px bg-slate-100" />
 
@@ -167,9 +160,9 @@ export default function Navbar() {
                 (tech) => (
                   <span
                     key={tech}
-                    className="rounded-md border border-slate-200 bg-white px-2 py-1 text-[10px] font-semibold text-slate-700 shadow-2xs"
+                    className="rounded-md inline-flex border gap-1 border-slate-200 bg-white px-2 py-1 text-[10px] font-semibold text-slate-700 shadow-2xs"
                   >
-                    {tech}
+                    <Tag size={12} className="text-slate-700" /> {tech}
                   </span>
                 )
               )}
