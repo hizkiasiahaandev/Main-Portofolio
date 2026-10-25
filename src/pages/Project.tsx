@@ -8,8 +8,8 @@ import {  ArrowUpRight, Link, ExternalLink, Tag } from "lucide-react";
 
 export default function Projectpage() {
   return (
-    <section id="projects" className="bg-gray-50  px-4 py-24">
-      <div className="h-full">
+    <section id="projects" className="bg-gray-50 md:overflow-hidden  md:h-[120vh] px-4 py-24">
+      <div className="h-full md:overflow-y-auto md:overscroll-contain md:scrollbar-hide">
         <div className="mx-auto w-full max-w-7xl">
         <div className="mb-16 max-w-2xl">
           <p className="mb-3 flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-blue-600">
@@ -28,7 +28,7 @@ export default function Projectpage() {
           </p>
         </div>
 
-        <div className="space-y-24 md:space-y-32">
+        <div>
           {projects.map((project) => (
             <article
               key={project.number}
