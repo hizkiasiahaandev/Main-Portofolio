@@ -1,75 +1,109 @@
-# React + TypeScript + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built to showcase my projects, technical skills, and background as a developer. Designed with a clean interface, smooth interactions, and a focus on user experience.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Responsive Design** — Optimized for desktop, tablet, and mobile devices.
+- **About Me** — Introduction, background, and technical interests.
+- **Projects Showcase** — Highlights my development projects, including their descriptions and technologies.
+- **CV Download** — Allows visitors to download my CV.
+- **Interactive UI** — Smooth transitions, hover effects, and tooltips.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** — Building reusable user interface components.
+- **TypeScript** — Type-safe application development.
+- **Vite** — Fast development server and build tooling.
+- **Tailwind CSS** — Utility-first styling.
+- **shadcn/ui** — Reusable UI components.
+- **Lucide React** — Icons and visual elements.
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Make sure you have [Node.js](https://nodejs.org/) and npm installed.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repository:
 
+```bash
+git clone https://github.com/hizkiasiahaandev/Main-Portofolio.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Navigate to the project directory:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd Main-Portofolio
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+### Run Development Server
+
+Start the local development server on port `5173`:
+
+```bash
+npm run dev -- --host 0.0.0.0 --port 5173
+```
+
+Open the application in your browser:
+
+**http://localhost:5173**
+
+> If port 5173 is already in use, Vite may select another port unless strict port mode is enabled.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 📂 Project Structure
+
+```text
+Main-Portofolio/
+├── public/
+│   └── assets/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── data/
+│   ├── types/
+│   ├── App.tsx
+│   └── main.tsx
+├── index.html
+├── package.json
+└── README.md
+```
+
+*The project structure above is illustrative; your actual folders may differ.*
+
+## 👨‍💻 About Me
+
+I'm a developer interested in building modern web applications and solving practical problems through technology. I enjoy learning new tools, improving my programming skills, and creating user-friendly digital experiences.
+
+## 📬 Contact
+
+Feel free to reach out for internship opportunities, collaboration, or professional inquiries.
+
+- **Email:** [siahaanhizkia548@gmail.com](mailto:siahaanhizkia548@gmail.com)
+- **GitHub:** [hizkiasiahaandev](https://github.com/hizkiasiahaandev)
+
+---
+
+⭐ If you find this project interesting, feel free to explore the repository.
+
+**Built with React, TypeScript, and Vite.**
