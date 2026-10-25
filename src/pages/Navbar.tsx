@@ -162,7 +162,7 @@ export default function Navbar() {
                     key={tech}
                     className="rounded-md inline-flex border gap-1 border-slate-200 bg-white px-2 py-1 text-[10px] font-semibold text-slate-700 shadow-2xs"
                   >
-                    <Tag size={12} className="text-slate-700" /> {tech}
+                    <Tag size={12} fill="currentColor" stroke="white" className="text-slate-700" /> {tech}
                   </span>
                 )
               )}

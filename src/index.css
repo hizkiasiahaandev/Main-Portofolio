@@ -133,3 +133,13 @@
 html, body {
   scroll-behavior: smooth;
 }
+
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE dan Edge lama */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}

@@ -8,8 +8,8 @@ import {  ArrowUpRight, Link, ExternalLink, Tag } from "lucide-react";
 
 export default function Projectpage() {
   return (
-    <section id="projects" className="bg-gray-50 h-screen overflow-hidden px-4 py-24">
-      <div className="h-full overflow-y-auto  overscroll-contain">
+    <section id="projects" className="bg-gray-50  px-4 py-24">
+      <div className="h-full">
         <div className="mx-auto w-full max-w-7xl">
         <div className="mb-16 max-w-2xl">
           <p className="mb-3 flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-blue-600">

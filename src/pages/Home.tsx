@@ -16,9 +16,8 @@ const roles = [
 
 export default function Homepage() {
     return (
-        <section id="home" className="flex min-h-screen items-center px-4  py-25">
-            <div className="grid w-full max-w-7xl mx-auto items-center gap-12 md:grid-cols-2">
-
+        <section id="home" className="flex relative min-h-screen  items-center px-4 py-24">
+            <div className="mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
                 <div>
                     <p className="mb-3 flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-blue-600">
                         <span className="h-px w-8 bg-blue-600" />
@@ -60,11 +59,10 @@ export default function Homepage() {
 
                     <Badge
                         variant="outline"
-                        className="mt-6 flex h-auto w-fit items-center gap-4 rounded-full border-emerald-200/70 bg-emerald-50/70 px-4 py-3 text-xs font-medium tracking-wide text-emerald-800"
+                        className="mt-6 flex h-auto w-fit max-w-full flex-wrap items-center gap-x-4 gap-y-3 rounded-2xl border-emerald-200/70 bg-emerald-50/70 px-4 py-3 text-left text-xs font-medium tracking-wide text-emerald-800"
                     >
-                        {/* Status */}
-                        <span className="flex items-center gap-2 whitespace-nowrap">
-                            <span className="relative flex size-2.5">
+                        <span className="flex items-center  gap-2">
+                            <span className="relative flex size-2.5 shrink-0">
                                 <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                                 <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
                             </span>
@@ -74,23 +72,30 @@ export default function Homepage() {
 
                         <Separator
                             orientation="vertical"
-                            className="h-5 bg-emerald-300/80"
+                            className="hidden h-5 bg-emerald-300/80 sm:block"
                         />
-                       <Tooltip>
-                        <TooltipTrigger
-                        render={
-                             <a
-                            href="mailto:siahaanhizkia548@gmail.com"
-                            className="whitespace-nowrap transition-colors hover:text-emerald-600"
-                        >
-                            siahaanhizkia548@gmail.com
-                        </a>
-                        }
+
+                        <Separator
+                            orientation="horizontal"
+                            className="h-px w-full bg-emerald-300/80 sm:hidden"
                         />
-                        <TooltipContent>
-                            <p>Go to my email</p>
-                        </TooltipContent>
-                       </Tooltip>
+
+
+                        <Tooltip>
+                            <TooltipTrigger
+                                render={
+                                    <a
+                                        href="mailto:siahaanhizkia548@gmail.com"
+                                        className="break-all transition-colors hover:text-emerald-600"
+                                    >
+                                        siahaanhizkia548@gmail.com
+                                    </a>
+                                }
+                            />
+                            <TooltipContent>
+                                <p>Go to my email</p>
+                            </TooltipContent>
+                        </Tooltip>
                     </Badge>
                     <div className="mt-8 flex flex-wrap gap-4">
                         <Tooltip>
@@ -119,8 +124,6 @@ export default function Homepage() {
                     </div>
 
                 </div>
-
-
 
                 <div className="relative group flex justify-center md:justify-end">
                     <div className="absolute inset-1 rounded-full bg-blue-200/40 blur-3xl" />
