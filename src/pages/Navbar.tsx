@@ -61,9 +61,7 @@ export default function Navbar() {
             </div>
             <div className="pointer-events-none absolute inset-px -z-10 rounded-[11px] bg-white" />
 
-            <div className="inline-flex size-11 items-center justify-center rounded-lg bg-slate-800 text-white">
-              <Code2 size={19} strokeWidth={2} />
-            </div>
+          
 
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight text-slate-800">
