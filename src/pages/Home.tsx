@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import kia from "../assets/kia.jpg";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import {  ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const roles = [

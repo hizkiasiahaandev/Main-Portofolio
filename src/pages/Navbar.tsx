@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { ArrowRight, ArrowUpRight, Code2, Mail, Menu, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, Code2, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 type NavLink = {
@@ -61,7 +61,6 @@ export default function Navbar() {
             </div>
             <div className="pointer-events-none absolute inset-px -z-10 rounded-[11px] bg-white" />
 
-          
 
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight text-slate-800">
