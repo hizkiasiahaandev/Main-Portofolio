@@ -6,11 +6,15 @@ import { Separator } from "@/components/ui/separator";
 import Cv from "../assets/CV_Hizkia_Siahaan.pdf";
 import CustomTooltip from "@/components/ui/common/CustomTooltip";
 
-const roles = [
-    "Full-Stack Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "Software Developer",
+type Roles = {
+    text: string
+};
+
+const roles: Roles[] = [
+    { text: "Full-Stack Developer" },
+    { text: "Frontend Developer" },
+    { text: "Backend Developer" },
+    { text: "Software Developer" }
 ];
 
 
@@ -30,7 +34,7 @@ export default function Homepage() {
 
                     <h2 className="mt-3 text-xl font-medium text-slate-500 md:text-2xl">
                         <TypeAnimation
-                            sequence={roles.flatMap((role) => [role, 2000])}
+                            sequence={roles.flatMap((role) => [role.text, 2000])}
                             wrapper="span"
                             speed={50}
                             deletionSpeed={50}
