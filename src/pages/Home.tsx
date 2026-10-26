@@ -4,7 +4,6 @@ import { ArrowUpRight, Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import Cv from "../assets/CV_Hizkia_Siahaan.pdf";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import CustomTooltip from "@/components/ui/common/CustomTooltip";
 
 const roles = [
