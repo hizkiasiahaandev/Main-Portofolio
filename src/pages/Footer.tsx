@@ -6,7 +6,7 @@ export default function Footerpage() {
         <div className="max-w-7xl w-full mx-auto px-4 py-6 flex justify-between gap-4">
             <div>
                 <p className="text-sm font-semibold text-slate-800">
-                    Hizkia Siahaan
+                    Hizkia Portolio
                 </p>
                 <p className="text-xs text-slate-400 mt-1">
                     © 2026 All rights reserved.
