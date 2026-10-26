@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import Cv from "../assets/CV_Hizkia_Siahaan.pdf";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import CustomTooltip from "@/components/ui/common/CustomTooltip";
 
 const roles = [
     "Full-Stack Developer",
@@ -81,39 +82,26 @@ export default function Homepage() {
                         />
 
 
-                        <Tooltip>
-                            <TooltipTrigger
-                                render={
-                                    <a
-                                        href="mailto:siahaanhizkia548@gmail.com"
-                                        className="break-all transition-colors hover:text-emerald-600"
-                                    >
-                                        siahaanhizkia548@gmail.com
-                                    </a>
-                                }
-                            />
-                            <TooltipContent>
-                                <p>Go to my email</p>
-                            </TooltipContent>
-                        </Tooltip>
+                        <CustomTooltip content="Go to my email">
+                            <a
+                                href="mailto:siahaanhizkia548@gmail.com"
+                                className="break-all transition-colors hover:text-emerald-600"
+                            >
+                                siahaanhizkia548@gmail.com
+                            </a>
+                        </CustomTooltip>
                     </Badge>
                     <div className="mt-8 flex flex-wrap gap-4">
-                        <Tooltip>
-                            <TooltipTrigger render={
-                                <a
-                                    href={Cv}
-                                    download
-                                    className="group inline-flex items-center gap-2 rounded-xl bg-slate-800 px-6 py-3 text-sm font-medium text-white shadow-xl shadow-slate-500/30 ring-2 ring-slate-500 ring-offset-2 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-900"
-                                >
-                                    <Download size={16} />
-                                    Download My CV
-                                </a>
-                            }
-                            />
-                            <TooltipContent>
-                                <p> Download My CV</p>
-                            </TooltipContent>
-                        </Tooltip>
+                        <CustomTooltip content="Download My CV">
+                            <a
+                                href={Cv}
+                                download
+                                className="group inline-flex items-center gap-2 rounded-xl bg-slate-800 px-6 py-3 text-sm font-medium text-white shadow-xl shadow-slate-500/30 ring-2 ring-slate-500 ring-offset-2 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-900"
+                            >
+                                <Download size={16} />
+                                Download My CV
+                            </a>
+                        </CustomTooltip>
                         <a
                             href="#projects"
                             className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-6 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50"

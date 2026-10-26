@@ -8,7 +8,7 @@ import {  ArrowUpRight, Link, ExternalLink, Tag } from "lucide-react";
 
 export default function Projectpage() {
   return (
-    <section id="projects" className="bg-gray-50 md:overflow-hidden  md:h-[150vh] px-4 py-24">
+    <section id="projects" className="bg-gray-50 md:overflow-hidden  md:h-[130vh] px-4 py-24">
       <div className="h-full md:overflow-y-auto scrollbar-hide">
         <div className="mx-auto w-full max-w-7xl">
         <div className="mb-16 max-w-2xl">
