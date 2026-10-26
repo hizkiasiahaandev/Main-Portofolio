@@ -5,7 +5,7 @@ export default function Footerpage() {
     return (
         <div className="max-w-7xl w-full mx-auto px-4 py-6 flex justify-between gap-4">
             <div>
-                <p className="text-sm font-semibold text-slate-800">
+                <p className="text-sm tracking-wide font-semibold text-slate-800">
                     Hizkia Portolio
                 </p>
                 <p className="text-xs text-slate-400 mt-1">
@@ -16,7 +16,7 @@ export default function Footerpage() {
             <div className="flex items-center gap-3">
                 <CustomTooltip content="Github">
                     <a
-                        href="https://github.com/username"
+                        href="https://github.com/hizkiasiahaandev"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub"
@@ -28,7 +28,7 @@ export default function Footerpage() {
                 </CustomTooltip>
                <CustomTooltip content="LinkedIn">
                  <a
-                    href="https://linkedin.com/in/username"
+                    href="https://www.linkedin.com/in/hizkia-siahaan-59b003280/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -52,7 +52,7 @@ export default function Footerpage() {
 
               <CustomTooltip content="Email">
                   <a
-                    href="mailto:email@example.com"
+                    href="mailto:siahaanhizkia548@gmail.com"
                     aria-label="Email"
                     className="p-2 rounded-xl text-gray-400 hover:text-green-400 hover:bg-white/10 transition-all duration-300"
                 >

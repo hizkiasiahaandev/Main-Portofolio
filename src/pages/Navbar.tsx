@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator";
-import { ArrowUpRight, Code2, Menu, Tag, X } from "lucide-react";
+import { ArrowUpRight, Menu, Tag, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { FaCodeBranch } from "react-icons/fa";
 
 type NavLink = {
   label: string;
@@ -62,7 +63,7 @@ export default function Navbar() {
             <div className="pointer-events-none absolute inset-px -z-10 rounded-[11px] bg-white" />
 
             <div className="flex flex-col">
-              <span className="text-lg font-bold tracking-tight text-slate-800">
+              <span className="text-lg font-semibold tracking-wide text-slate-800">
                 Hizkia Portfolio
               </span>
               <span className="text-[12px] font-medium text-slate-500 sm:text-xs">
@@ -143,7 +144,7 @@ export default function Navbar() {
           <div className="rounded-2xl border border-slate-200/80 bg-slate-50/60 p-4">
             <div className="mb-3 flex items-center justify-between">
               <div className="flex size-8 items-center justify-center rounded-lg bg-slate-900 text-white">
-                <Code2 size={16} />
+                <FaCodeBranch size={16} />
               </div>
               <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                 Technologies
@@ -171,9 +172,14 @@ export default function Navbar() {
 
           <div className="mt-4 text-center">
             <Separator className="mb-3 h-px bg-slate-100" />
-            <p className="text-[11px] font-medium text-slate-400">
-              © 2026 Hizkia Portfolio
-            </p>
+            <div>
+              <p className="text-[11px] font-semibold tracking-widest text-slate-800">
+                Hizkia Portfolio
+              </p>
+              <p className="text-[9px] text-slate-400">
+                © 2026 All rights reserved.
+              </p>
+            </div>
           </div>
         </div>
       </div>

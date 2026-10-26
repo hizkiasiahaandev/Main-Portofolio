@@ -117,7 +117,7 @@ export default function Homepage() {
                 </div>
 
                 <div className="relative group flex justify-center md:justify-end">
-                    <div className="absolute inset-1 rounded-full bg-blue-200/40 blur-3xl" />
+                    <div className="absolute inset-1  rounded-full bg-blue-200/40 blur-3xl" />
 
                     <div className="absolute right-3 top-3 hidden aspect-square w-full max-w-sm rounded-3xl border-2 border-slate-200 md:block" />
 
