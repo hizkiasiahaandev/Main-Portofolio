@@ -1,5 +1,4 @@
 import CustomTooltip from "@/components/ui/common/CustomTooltip";
-import { Inspect, LineChart, Link, Mail } from "lucide-react";
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Footerpage() {
