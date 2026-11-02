@@ -106,12 +106,12 @@ export default function Projectpage() {
               </div>
 
               <div className="relative">
-                <div className="group relative aspect-4/3 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-xl shadow-slate-900/5">
+                <div className="group relative aspect-4 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-xl shadow-slate-900/5">
                   <img
                     src={project.image}
                     alt={`${project.title} preview`}
                     loading="lazy"
-                    className="h-full w-full object-cover object-[center_15%] transition-transform duration-700 group-hover:scale-105"
+                    className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
 
                   <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-950/30 via-transparent to-transparent opacity-60" />
