@@ -79,7 +79,7 @@ export default function Projectpage() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-600"
+                      className="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-900 px-5 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1"
                     >
                       <Link size={16} />
                       Source Code
@@ -92,7 +92,7 @@ export default function Projectpage() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-5 py-3 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-white"
+                      className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
                     >
                       Live Demo
                       <ExternalLink size={15} />
