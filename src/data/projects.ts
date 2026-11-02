@@ -1,5 +1,7 @@
 import type { Project } from "../types/project";
-import inventrack from "../assets/kia.jpg"
+import inventrack from "../assets/inventrack.png"
+import hizkia from "../assets/hizkia.png";
+import hr from "../assets/hr.png"
 
 export const projects: Project[] = [
     {
@@ -38,7 +40,7 @@ export const projects: Project[] = [
         ],
         github: "",
         demo: "",
-        image: inventrack,
+        image: hr,
     },
     {
         number: "03",

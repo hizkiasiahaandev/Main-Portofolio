@@ -1,10 +1,6 @@
-
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 import {  ArrowUpRight, Link, ExternalLink, Tag } from "lucide-react";
-
-
-
 
 export default function Projectpage() {
   return (
