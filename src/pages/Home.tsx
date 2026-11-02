@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import kia from "../assets/kia.jpg";
+import hizkia from "../assets/hizkia.png";
 import { ArrowUpRight, Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -122,7 +122,7 @@ export default function Homepage() {
                     <div className="absolute right-3 top-3 hidden aspect-square w-full max-w-sm rounded-3xl border-2 border-slate-200 md:block" />
 
                     <img
-                        src={kia}
+                        src={hizkia}
                         alt="Hizkia Siahaan"
                         className="relative z-10 group-hover:translate-x-2 group-hover:-rotate-4 aspect-square w-full max-w-sm rounded-3xl border-4 border-white object-cover object-[center_20%] shadow-xl shadow-slate-900/10 transition-all duration-500 ease-in-out hover:saturate-0 hover:scale-105 hover:shadow-2xl"
                     />
