@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import Cv from "../assets/CV_Hizkia_Siahaan.pdf";
 import CustomTooltip from "@/components/ui/common/CustomTooltip";
+import { Helmet } from "react-helmet-async";
 
 type Roles = {
     text: string
@@ -20,116 +21,157 @@ const roles: Roles[] = [
 
 export default function Homepage() {
     return (
-        <section id="home" className="flex relative min-h-screen  items-center px-4 py-24">
-            <div className="mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
-                <div>
-                    <p className="mb-3 flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-blue-600">
-                        <span className="h-px w-8 bg-blue-600" />
-                        Hello, I'm a Fresh Graduate
-                    </p>
+        <>
 
-                    <h1 className="text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">
-                        Hizkia Siahaan
-                    </h1>
+            <Helmet>
+                <title>
+                    Hizkia Siahaan | Full-Stack Web Developer
+                </title>
 
-                    <h2 className="mt-3 text-xl font-medium text-slate-500 md:text-2xl">
-                        <TypeAnimation
-                            sequence={roles.flatMap((role) => [role.text, 2000])}
-                            wrapper="span"
-                            speed={50}
-                            deletionSpeed={50}
-                            repeat={Infinity}
-                            className="text-slate-500"
-                        />
-                    </h2>
+                <meta
+                    name="description"
+                    content="Hizkia Siahaan, Full-Stack Web Developer specializing in React, TypeScript, Node.js, and Prisma ORM. Explore my projects and portfolio."
+                />
 
-                    <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-                        <p className="max-w-lg leading-relaxed text-slate-600">
-                            A recent graduate passionate about software development,
-                            building modern web applications, and continuously
-                            improving my programming skills.
+                <meta
+                    name="author"
+                    content="Hizkia Siahaan"
+                />
+
+                <link
+                    rel="canonical"
+                    href="https://hizkiasiahaan-portofolio.vercel.app/"
+                />
+
+                <meta
+                    property="og:title"
+                    content="Hizkia Siahaan | Web Developer Portfolio"
+                />
+
+                <meta
+                    property="og:description"
+                    content="Explore my projects, skills, and experience as a Web Developer."
+                />
+
+                <meta
+                    property="og:type"
+                    content="website"
+                />
+
+                <meta
+                    property="og:url"
+                    content="https://hizkiasiahaan-portofolio.vercel.app/"
+                />
+            </Helmet>
+            <section id="home" className="flex relative min-h-screen  items-center px-4 py-24">
+                <div className="mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
+                    <div>
+                        <p className="mb-3 flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-blue-600">
+                            <span className="h-px w-8 bg-blue-600" />
+                            Hello, I'm a Fresh Graduate
                         </p>
 
-                        <div className="shrink-0 relative border-l-2 border-slate-300 pl-4">
-                            <p className="tect-[10px] font-medium tracking-wider text-slate-400">
-                                GPA
-                            </p>
-                            <p className="text-lg font-bold text-slate-800">
-                                3.73 <span className="text-xs font-medium text-slate-400"> / 4.00</span>
-                            </p>
-                            <div className="absolute  left-0 -top-5 -translate-x-1/2 translate-y-1/2  z-20 size-6 rounded-full border-4 border-white bg-blue-500" />
-                        </div>
-                    </div>
+                        <h1 className="text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">
+                            Hizkia Siahaan
+                        </h1>
 
-                    <Badge
-                        variant="outline"
-                        className="mt-6 flex h-auto w-fit max-w-full flex-wrap items-center gap-x-4 gap-y-3 rounded-2xl border-emerald-200/70 bg-emerald-50/70 px-4 py-3 text-left text-xs font-medium tracking-wide text-emerald-800"
-                    >
-                        <span className="flex items-center  gap-2">
-                            <span className="relative flex size-2.5 shrink-0">
-                                <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                                <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
+                        <h2 className="mt-3 text-xl font-medium text-slate-500 md:text-2xl">
+                            <TypeAnimation
+                                sequence={roles.flatMap((role) => [role.text, 2000])}
+                                wrapper="span"
+                                speed={50}
+                                deletionSpeed={50}
+                                repeat={Infinity}
+                                className="text-slate-500"
+                            />
+                        </h2>
+
+                        <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+                            <p className="max-w-lg leading-relaxed text-slate-600">
+                                A recent graduate passionate about software development,
+                                building modern web applications, and continuously
+                                improving my programming skills.
+                            </p>
+
+                            <div className="shrink-0 relative border-l-2 border-slate-300 pl-4">
+                                <p className="tect-[10px] font-medium tracking-wider text-slate-400">
+                                    GPA
+                                </p>
+                                <p className="text-lg font-bold text-slate-800">
+                                    3.73 <span className="text-xs font-medium text-slate-400"> / 4.00</span>
+                                </p>
+                                <div className="absolute  left-0 -top-5 -translate-x-1/2 translate-y-1/2  z-20 size-6 rounded-full border-4 border-white bg-blue-500" />
+                            </div>
+                        </div>
+
+                        <Badge
+                            variant="outline"
+                            className="mt-6 flex h-auto w-fit max-w-full flex-wrap items-center gap-x-4 gap-y-3 rounded-2xl border-emerald-200/70 bg-emerald-50/70 px-4 py-3 text-left text-xs font-medium tracking-wide text-emerald-800"
+                        >
+                            <span className="flex items-center  gap-2">
+                                <span className="relative flex size-2.5 shrink-0">
+                                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                                    <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
+                                </span>
+
+                                Open to Internship Opportunities
                             </span>
 
-                            Open to Internship Opportunities
-                        </span>
+                            <Separator
+                                orientation="vertical"
+                                className="hidden h-5 bg-emerald-300/80 sm:block"
+                            />
 
-                        <Separator
-                            orientation="vertical"
-                            className="hidden h-5 bg-emerald-300/80 sm:block"
-                        />
-
-                        <Separator
-                            orientation="horizontal"
-                            className="h-px w-full bg-emerald-300/80 sm:hidden"
-                        />
+                            <Separator
+                                orientation="horizontal"
+                                className="h-px w-full bg-emerald-300/80 sm:hidden"
+                            />
 
 
-                        <CustomTooltip content="Go to my email">
+                            <CustomTooltip content="Go to my email">
+                                <a
+                                    href="mailto:siahaanhizkia548@gmail.com"
+                                    className="break-all transition-colors hover:text-emerald-600"
+                                >
+                                    siahaanhizkia548@gmail.com
+                                </a>
+                            </CustomTooltip>
+                        </Badge>
+                        <div className="mt-8 flex flex-wrap gap-4">
+                            <CustomTooltip content="Download My CV">
+                                <a
+                                    href={Cv}
+                                    download
+                                    className="group inline-flex items-center gap-2 rounded-xl bg-slate-800 px-6 py-3 text-sm font-medium text-white shadow-xl shadow-slate-500/30 ring-2 ring-slate-500 ring-offset-2 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-900"
+                                >
+                                    <Download size={16} />
+                                    Download My CV
+                                </a>
+                            </CustomTooltip>
                             <a
-                                href="mailto:siahaanhizkia548@gmail.com"
-                                className="break-all transition-colors hover:text-emerald-600"
+                                href="#projects"
+                                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-6 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
                             >
-                                siahaanhizkia548@gmail.com
+                                <ArrowUpRight size={16} />
+                                My Projects
                             </a>
-                        </CustomTooltip>
-                    </Badge>
-                    <div className="mt-8 flex flex-wrap gap-4">
-                        <CustomTooltip content="Download My CV">
-                            <a
-                                href={Cv}
-                                download
-                                className="group inline-flex items-center gap-2 rounded-xl bg-slate-800 px-6 py-3 text-sm font-medium text-white shadow-xl shadow-slate-500/30 ring-2 ring-slate-500 ring-offset-2 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-900"
-                            >
-                                <Download size={16} />
-                                Download My CV
-                            </a>
-                        </CustomTooltip>
-                        <a
-                            href="#projects"
-                            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-6 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
-                        >
-                            <ArrowUpRight size={16} />
-                            My Projects
-                        </a>
+                        </div>
+
                     </div>
 
+                    <div className="relative group flex justify-center md:justify-end">
+                        <div className="absolute inset-1  rounded-full bg-blue-400/40 blur-3xl" />
+
+                        <div className="absolute right-3 top-3 hidden aspect-square w-full max-w-sm rounded-3xl border-2 border-slate-200 md:block" />
+
+                        <img
+                            src={hizkia}
+                            alt="Hizkia Siahaan"
+                            className="relative z-10 group-hover:translate-x-2 group-hover:-rotate-4 aspect-square w-full max-w-sm rounded-3xl border-4 border-white object-cover object-[center_40%] shadow-xl shadow-slate-900/10 transition-all duration-500 ease-in-out hover:saturate-0 hover:scale-105 hover:shadow-2xl"
+                        />
+                    </div>
                 </div>
-
-                <div className="relative group flex justify-center md:justify-end">
-                    <div className="absolute inset-1  rounded-full bg-blue-400/40 blur-3xl" />
-
-                    <div className="absolute right-3 top-3 hidden aspect-square w-full max-w-sm rounded-3xl border-2 border-slate-200 md:block" />
-
-                    <img
-                        src={hizkia}
-                        alt="Hizkia Siahaan"
-                        className="relative z-10 group-hover:translate-x-2 group-hover:-rotate-4 aspect-square w-full max-w-sm rounded-3xl border-4 border-white object-cover object-[center_40%] shadow-xl shadow-slate-900/10 transition-all duration-500 ease-in-out hover:saturate-0 hover:scale-105 hover:shadow-2xl"
-                    />
-                </div>
-
-
-            </div>
-        </section>
+            </section>
+        </>
     );
 }
