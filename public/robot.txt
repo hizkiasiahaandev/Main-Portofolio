@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hizkiahaan-portofolio.vercel.app/sitemap.xml
+Sitemap: https://hizkiasiahaan-portofolio.vercel.app//sitemap.xml
